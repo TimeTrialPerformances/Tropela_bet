@@ -1,0 +1,8 @@
+pandas
+dash-mantine-components==0.12.1
+plotly
+dash
+datetime
+scikit-learn
+statistics
+gunicorn

@@ -1,0 +1,225 @@
+Carrera;Corredor 1;Cuota 1;Cuota 2;Corredor 2;Prediccion;Porcentaje;Resultado;Apostado
+Giro 7;Aurelien Paret-Peintre;1.4;2.75;Domenico Pozzovivo;Aurelien Paret-Peintre;0.95277;1.4;25
+Giro 7;Ben O'Connor;1.66;2.1;Alexei Lutsenko;Ben O'Connor;0.91705;1.66;25
+Giro 7;Cian Uijtdebroeks;1.36;3;Jan Hirt;Cian Uijtdebroeks;0.99821;1.36;25
+Giro 7;Deniel Felipe Martinez;1.33;3.25;Luke Plapp;Deniel Felipe Martinez;0.99837;0;25
+Giro 7;Filippo Ganna;1.28;3.5;Magnus Sheffield;Filippo Ganna;0.99998;1.28;25
+Giro 7;Jan Tratnik;2.1;1.66;Maximilian Schachmann;Jan Tratnik;0.91863;0;25
+Giro 7;Josef Cerny;2;1.72;Daan Hoole;Daan Hoole;0.76844;1.72;25
+Giro 7;Juanpe Lopez;1.83;1.83;Einer Rubio;Juanpe Lopez;0.76364;1.83;25
+Giro 7;Mauri Vansevenant;1.72;2;Alex Baudin;Alex Baudin;0.84453;2;25
+Giro 7;Michael Hepburn;1.57;2.25;Edoardo Affini;Michael Hepburn;0.75125;0;25
+Giro 7;Stefan De Bod;1.66;2.1;Rainer Kepplinger;Stefan De Bod;0.97079;0;25
+Giro 7;Tadej Pogacar;1.16;4.5;Geraint Thomas;Tadej Pogacar;0.97599;1.16;25
+Giro 7;Thymen Arensman;1.72;2;Antonio Tiberi;Thymen Arensman;0.96435;1.72;25
+Giro 14;Antonio Tiberi;1.4;2.75;Daniel Felipe Martinez;Daniel Felipe Martinez;0.82839;0;33
+Giro 14;Ben O'Connor;1.28;3.5;Filippo Zana;Ben O'Connor;0.99841;1.28;33
+Giro 14;Daan Hoole;2;1.72;Edoardo Affini;Daan Hoole;0.99723;0;33
+Giro 14;Filippo Ganna;1.2;4.33;Otros Participantes;Filippo Ganna;0.99707;1.2;33
+Giro 14;Jasha Sutterlin;1.53;2.37;Jan Tratnik;Jan Tratnik;0.98823;2.37;33
+Giro 14;Josef Cerny;1.83;1.83;Maximilian Walscheid;Josef Cerny;0.73567;0;33
+Giro 14;Lorenzo Fortunato;1.61;2.2;Einer Rubio;Lorenzo Fortunato;0.73384;1.61;33
+Giro 14;Lorenzo Milesi;1.5;2.5;Michael Hepburn;Lorenzo Milesi;0.53537;1.5;33
+Giro 14;Magnus Sheffield;1.4;2.75;Thymen Arensman;Thymen Arensman;0.77611;2.75;33
+Giro 14;Maximilian Schachmann;1.57;2.25;Lucas Plapp;Maximilian Schachmann;0.9996;0;33
+Giro 14;Rainer Kepplinger;2;1.72;Stefan De Bod;Stefan De Bod;0.98873;1.72;33
+Giro 14;Tadej Pogacar ;1.3;3.4;Geraint Thomas;Tadej Pogacar ;0.9933;1.3;33
+Dauphine 4;Bruno Armirail;1.72;2;Alexander Vlasov;Bruno Armirail;0.84429;1.72;25
+Dauphine 4;Carlos Rodriguez;1.28;3.5;Sepp Kuss;Sepp Kuss;0.94782;0;25
+Dauphine 4;Fred Wright;1.5;2.5;Luke Durbridge;Fred Wright;0.98266;1.5;25
+Dauphine 4;Ilan Van Wilder;1.44;2.62;Neilson Powless;Ilan Van Wilder;0.99926;0;25
+Dauphine 4;Joshua Tarling;1.61;2.2;Remco Evenepoel;Remco Evenepoel;0.99933;2.2;25
+Dauphine 4;Louis Meintjes;1.61;2.2;Guillaume Martin;Guillaume Martin;0.57875;0;25
+Dauphine 4;Matteo Sobrero;1.57;2.25;Jonathan Castroviejo;Matteo Sobrero;0.99908;1.57;25
+Dauphine 4;Magnus Cort Nielsen;1.83;1.83;Derek Gee;Magnus Cort Nielsen;0.99545;0;25
+Dauphine 4;Matteo Jorgenson;1.33;3.25;Tao Geoghegan Hart;Matteo Jorgenson;0.95804;1.33;25
+Dauphine 4;Primoz Roglic;1.44;2.62;Juan Ayuso;Primoz Roglic;0.91077;1.44;25
+Dauphine 4;Romain Gregoire;1.57;2.25;Oier Lazkano;Romain Gregoire;0.97787;0;25
+ZLM 1;Gleb Syritsa;1.72;2;Casper Van Uden;Gleb Syritsa;0.76593;1.72;25
+ZLM 1;Loe Van Belle;1.5;2.5;Maurice Ballerstedt;Loe Van Belle;0.97102;1.5;25
+ZLM 1;Max Walker;1.57;2.25;Sjors Lugthart;Max Walker;0.74058;1.57;25
+ZLM 1;Mike Teunissen;2.62;1.44;Arthur Kluckers;Mike Teunissen;0.71112;0;25
+ZLM 1;Roel Van Sintmaartensdijk;1.72;2;Axel Van der Tuuk;Roel Van Sintmaartensdijk;0.77175;1.72;25
+ZLM 1;Tim Van Dijke;1.4;2.75;Rune Herregodts;Tim Van Dijke;0.85254;0;25
+ZLM 1;Tom Bohli;1.83;1.83;Mirco Maestri;Tom Bohli;0.98935;1.83;25
+Suisse 1;Adam Yates;2.2;1.61;Isaac Del Toro;Adam Yates;0.81899;2.2;42
+Suisse 1;Alberto Bettiol;1.28;3.5;Samuel Watson;Alberto Bettiol;0.59086;0;42
+Suisse 1;Ethan Hayter;1.5;2.5;Yves Lampaert;Ethan Hayter;0.8894;0;42
+Suisse 1;Finn Fisher-Black;1.5;2.5;Mauro Schmid;Mauro Schmid;0.94759;0;42
+Suisse 1;Jan Christen;1.4;2.75;Marc Hirschi;Jan Christen;0.77409;1.4;42
+Suisse 1;Joao Almeida;1.36;3;Wilko Kelderman;Joao Almeida;0.99979;1.36;42
+Suisse 1;Johan Price-Pejtersen;1.44;2.62;Nelson Oliveira;Nelson Oliveira;0.99056;0;42
+Suisse 1;Mattias Skjelmose;1.66;2.1;Kevin Vauquelin;Mattias Skjelmose;0.84993;1.66;42
+Suisse 1;Maxim Van Gils;1.36;3;Ion Izagirre;Ion Izagirre;0.79525;0;42
+Suisse 1;Soren Kragh Andersen;1.83;1.83;Michael Matthews;Soren Kragh Andersen;0.95241;1.83;42
+Suisse 1;Stefan Kung;1.66;2.1;Stefan Bissegger;Stefan Kung;0.98528;0;42
+Belgium 1;Daan Hoole;1.83;1.83;Josef Cerny;Daan Hoole;0.92307;1.83;36
+Belgium 1;Ivan Romeo;1.44;2.62;Per Strand Hagenes;Ivan Romeo;0.99294;1.44;36
+Belgium 1;Jenno Berckmoers;1.44;2.62;Alex Aranburu;Alex Aranburu;0.75833;2.62;36
+Belgium 1;Jonas Abrahamsen;4;1.22;Jasper Stuyven;Jasper Stuyven;0.99969;1.22;36
+Belgium 1;Kasper Asgreen;1.53;2.37;Mathias Vacek;Kasper Asgreen;0.99851;0;36
+Belgium 1;Mike Teunissen;2.5;1.5;Brent Van Moer;Brent Van Moer;0.98374;1.5;36
+Belgium 1;Pierre Latour;1.57;2.25;Benoit Cosnefroy;Pierre Latour;0.99952;0;36
+Belgium 1;Remi Cavagna;1.44;2.62;Mick Van Dijke;Remi Cavagna;0.95495;1.44;36
+Belgium 1;Rune Herregodts;1.83;1.83;Alex Segaert;Rune Herregodts;0.91856;1.83;36
+Belgium 1;Soren Waerenskjold;1.28;3.5;Edoardo Affni;Soren Waerenskjold;0.84529;1.28;36
+Suisse 8;Egan Bernal;1.61;2.2;Matthew Riccitello;Egan Bernal;0.88567;0;43
+Suisse 8;Enric Mas;1.53;2.37;Felix Gall;Enric Mas;0.95477;1.53;43
+Suisse 8;Ethan Hayter;1.61;2.2;Finn Fisher-Black;Ethan Hayter;0.97014;0;43
+Suisse 8;Isaac Del Toro;1.28;3.5;Ben Tulett;Ben Tulett;0.99471;3.5;43
+Suisse 8;Joao Almeida;1.25;3.75;Adam Yates;Joao Almeida;0.98753;1.25;43
+Suisse 8;Marco Brenner;1.5;2.5;David de la Cruz;David de la Cruz;0.92413;2.5;43
+Suisse 8;Matteo Badilatti;1.5;2.5;George Bennett;George Bennett;0.99596;0;43
+Suisse 8;Mattias Skjelmose;1.33;3.25;Wilco Kelderman;Mattias Skjelmose;0.99483;1.33;43
+Suisse 8;Sergio Higuita;1.83;1.83;Wiliam Junior Lecerf;Wiliam Junior Lecerf;0.65084;0;43
+Suisse 8;Tom Pidcock;1.36;3;Oscar Onley;Oscar Onley;0.95881;0;43
+Suisse 8;Wout Poels;1.53;2.37;Pelayo Sanchez;Wout Poels;0.77459;0;43
+FRA-BE;Alec Segaert;1.5;2.5;Rune Herregodts;Alec Segaert;0.96348;1.5;62
+FRA-BE;Jenno Berckmoes;1.5;2.5;Sander De Pestel;Sander De Pestel;0.65006;2.5;62
+FRA-BE;Tim Wellens;1.22;4;Brent Van Moer;Tim Wellens;0.96837;1.22;62
+FRA-BE;Benjamin Thomas;1.4;2.75;Thibault Guernalec;Benjamin Thomas;0.99932;0;62
+FRA-BE;Bruno Armirail;1.4;2.75;Kevin Vauquelin;Kevin Vauquelin;0.83974;0;62
+FRA-BE;Enzo Paleni;1.66;2.1;Aurelien Paret-Peintre;Aurelien Paret-Peintre;0.98282;2.1;62
+FRA-BE;Remi Cavagna;1.33;3.25;Pierre Latour;Pierre Latour;0.96279;0;62
+Tour 7;Bruno Armirail;1.57;2.25;Neilson Powless;Bruno Armirail;0.99551;1.57;30
+Tour 7;Carlos Rodriguez;1.57;2.25;Alexdandr Vlasov;Alexdandr Vlasov;0.91592;2.25;30
+Tour 7;Egan Bernal;1.33;3.25;Felix Gall;Egan Bernal;0.98069;1.33;30
+Tour 7;Enric Mas;1.44;2.62;Mikel Landa;Enric Mas;0.89249;1.44;30
+Tour 7;Geraint Thomas;1.61;2.2;Nelson Oliveira;Geraint Thomas;0.92038;0;30
+Tour 7;Jack Haig;1.72;2;Chris Harper;Chris Harper;0.99361;0;30
+Tour 7;Juan Ayuso;1.53;2.37;Joao Almeida;Juan Ayuso;0.87851;0;30
+Tour 7;Laurens De Plus;1.66;2.1;Jai Hindley;Jai Hindley;0.90685;2.1;30
+Tour 7;Lous Meintjes;1.53;2.37;Steff Cras;Steff Cras;0.89026;2.37;30
+Tour 7;Matteo Jorgenson;1.5;2.5;Derek Gee;Matteo Jorgenson;0.67245;1.5;30
+Tour 7;Peio Bilbao;1.36;3;Santiago Buitrago;Peio Bilbao;0.99744;1.36;30
+Tour 7;Primoz Roglic;1.57;2.25;Jonas Vingegaard;Primoz Roglic;0.81853;1.57;30
+Tour 7;Remco Evenepoel;1.36;3;Tadej Pogacar;Tadej Pogacar;0.80686;0;30
+Tour 7;Stefan Bissegger;1.5;2.5;Luke Durbridge;Stefan Bissegger;0.99626;1.5;30
+Tour 7;Wout Van Aert;1.83;1.83;Stefan Kung;Wout Van Aert;0.99469;0;30
+Tour 21;Carlos Rodriguez;2.2;1.61;Adam Yates;Carlos Rodriguez;0.86072;0;34
+Tour 21;Giulio Ciccone;1.44;2.62;Steff Cras;Steff Cras;0.92777;0;34
+Tour 21;Guillaume Martin;1.57;2.25;Felix Gall;Felix Gall;0.97113;0;34
+Tour 21;Ilan Van Wilder;1.44;2.62;Jonathan Castroviejo ;Ilan Van Wilder;0.99998;1.44;34
+Tour 21;Jonas Vingegaard;1.25;3.75;Joao Almeida;Jonas Vingegaard;0.89442;1.25;34
+Tour 21;Kevin Vauquelin;1.28;3.5;Stefan Bissegger;Stefan Bissegger;0.92088;0;34
+Tour 21;Laurens De Plus;1.44;2.62;Jai Hindley;Jai Hindley;0.74869;0;34
+Tour 21;Matteo Jorgenson;1.16;4.5;Derek Gee;Matteo Jorgenson;0.86677;1.16;34
+Tour 21;Nelson Oliveira;2;1.72;Bruno Armirail;Bruno Armirail;0.9996;1.72;34
+Tour 21;Raul Garcia Pierna;1.4;2.75;Michael Matthews;Raul Garcia Pierna;0.98237;0;34
+Tour 21;Remco Evenepoel;1.44;2.62;Jonas Vingegaard;Remco Evenepoel;0.97971;0;34
+Tour 21;Romain Gregoire;1.72;2;Oier Lazkano;Oier Lazkano;0.63207;0;34
+Tour 21;Santiago Buitrago;1.66;2.1;Mikel Landa;Santiago Buitrago;0.72856;0;34
+Tour 21;Tadej Pogacar;1.53;2.37;Remco Evenepoel;Tadej Pogacar;0.99748;1.53;34
+Tour 21;Wout Van Aert;1.36;3;Matteo Sobrero;Wout Van Aert;0.99998;0;34
+JJOO;Derek Gee;2.1;1.66;Daan Hoole;Derek Gee;0.96484;0;23
+JJOO;Jan Tratnik;1.53;2.37;Oier Lazkano;Oier Lazkano;0.90092;2.37;23
+JJOO;Joshua Tarling;1.53;2.37;Filippo Ganna;Joshua Tarling;0.9994;0;23
+JJOO;Magnus Sheffield;1.53;2.37;Stefan Bissegger;Stefan Bissegger;0.90361;2.37;23
+JJOO;Mathias Vacek;1.53;2.37;Kevin Vauquelin;Kevin Vauquelin;0.99057;0;23
+JJOO;Mattias Skjelmose;1.72;2;Soren Waerenskjold;Mattias Skjelmose;0.92663;1.72;23
+JJOO;Michal Kwiatkowski;1.57;2.25;Ryan Mullen;Ryan Mullen;0.99154;2.25;23
+JJOO;Nelson Oliveira;1.53;2.37;Felix Grossschartner;Nelson Oliveira;0.97079;1.53;23
+JJOO;Remco Evenepoel;1.33;3.25;Brandon McNulty;Remco Evenepoel;0.99998;1.33;23
+JJOO;Stefan Kung;1.33;3.25;Mikkel Bjerg;Stefan Kung;0.98692;1.33;23
+JJOO;Tobias Foss;1.66;2.1;Lucas Plapp;Tobias Foss;0.82098;1.66;23
+Burgos 4;Antonio Tiberi;1.8;1.9;Ivo Oliveira;Antonio Tiberi;0.76539;1.8;37
+Burgos 4;Brandon Rivera;1.33;3.25;Roger Adria;Brandon Rivera;0.96459;1.33;37
+Burgos 4;David De la Cruz;1.53;2.37;Callum Scotson;David De la Cruz;0.98183;1.53;37
+Burgos 4;Eduard Dumbar;1.57;2.25;Rafal Majka;Eduard Dumbar;0.79623;1.57;37
+Burgos 4;Edoardo Affini;1.28;3.5;Jay Vine;Edoardo Affini;0.76662;0;37
+Burgos 4;Finn Fisher-Black;1.57;2.25;Thymen Arensman;Thymen Arensman;0.81286;0;37
+Burgos 4;Ivan Romeo;1.44;2.62;Jasha Sutterlin;Ivan Romeo;0.61877;1.44;37
+Burgos 4;Max Poole;1.33;3.25;Sepp Kuss;Max Poole;0.96766;1.33;37
+Burgos 4;Txomin Juaristi;2.1;1.66;Pablo Castrillo;Pablo Castrillo;0.9245;0;37
+Polonia 2;Aurelien Paret-Peintre;1.61;2.2;Yannis Voisard;Yannis Voisard;0.99061;2.2;28
+Polonia 2;Jonas Vingegaard;1.53;2.37;Magnus Sheffield;Jonas Vingegaard;0.89603;1.53;28
+Polonia 2;Lorenzo Milesi;1.66;2.1;Fred Wright;Lorenzo Milesi;0.98513;0;28
+Polonia 2;Lukas Nerurkar;1.44;2.62;Thibau Nys;Thibau Nys;0.99353;0;28
+Polonia 2;Mads Pedersen;1.72;2;Remi Cavagna;Mads Pedersen;0.87922;0;28
+Polonia 2;Matej Mohoric;1.66;2.1;Diego Ulissi;Matej Mohoric;0.95113;0;28
+Polonia 2;Peio Bilbao;1.72;2;Raul Garcia Pierna;Raul Garcia Pierna;0.7696;2;28
+Polonia 2;Rafal Majka;1.53;2.37;Jakob Fuglsang;Jakob Fuglsang;0.98884;2.37;28
+Polonia 2;Romain Gregoire;1.4;2.75;Mikkel Honore;Romain Gregoire;0.98227;1.4;28
+Polonia 2;Tim Wellens;1.61;2.2;Maximilian Schachmann;Maximilian Schachmann;0.89173;0;28
+Polonia 2;Wilco Kelderman;1.53;2.37;Felix Grossschartner;Felix Grossschartner;0.78682;2.37;28
+Polonia 2;Will Barta;1.83;1.83;Tobias Foss;Tobias Foss;0.88854;1.83;28
+Vuelta 1;Adam Yates;1.83;1.83;Carlos Rodriguez;Adam Yates;0.65363;1.83;25
+Vuelta 1;Antonio Tiberi;1.83;1.83;Mattias Skjelmose;Mattias Skjelmose;0.98407;1.83;25
+Vuelta 1;Ben O'Connor;1.66;2.1;Max Poole;Max Poole;0.84887;2.1;25
+Vuelta 1;Daniel Martinez;1.83;1.83;Isaac Del Toro;Daniel Martinez;0.99224;1.83;25
+Vuelta 1;Jay Vine;2.1;1.66;Brandon McNulty;Brandon McNulty;0.97962;1.66;25
+Vuelta 1;Joshua Tarling;1.28;3.5;Wout Van Aert;Joshua Tarling;0.99456;0;25
+Vuelta 1;Kasper Asgreen;1.83;1.83;Victor Campenaerts;Kasper Asgreen;0.94906;1.83;25
+Vuelta 1;Mathias Vacek;1.53;2.37;Edoardo Affini;Edoardo Affini;0.98431;0;25
+Vuelta 1;Nelson Oliveira;1.57;2.25;Bruno Armirail;Bruno Armirail;0.9999;2.25;25
+Vuelta 1;Oier Lazkano;1.66;2.1;Jasha Sutterlin;Oier Lazkano;0.98705;0;25
+Vuelta 1;Primoz Roglic;1.61;2.2;Joao Almeida;Joao Almeida;0.9252;0;25
+Vuelta 1;Sander De Pestel;1.72;2;Darren Rafferty;Sander De Pestel;0.97086;0;25
+Vuelta 1;Sepp Kuss;1.72;2;Enric Mas;Enric Mas;0.82365;0;25
+Vuelta 1;Stefan Kung;1.33;3.25;Mattia Cattaneo;Stefan Kung;0.99711;1.33;25
+Vuelta 1;Thymen Arensman;1.28;3.5;Tao Geoghegan Hart;Thymen Arensman;0.65061;1.28;25
+Alemania 1;Danny Van Poppel;1.72;2;Tim Van Dijke;Tim Van Dijke;0.99362;0;45
+Alemania 1;Filippo Ganna;1.53;2.37;Mads Pedersen;Mads Pedersen;0.93594;2.37;45
+Alemania 1;Gleb Syritsa;2.62;1.44;Stefan Bissegger;Stefan Bissegger;0.99999;1.44;45
+Alemania 1;Jannik Steimle;1.57;2.25;Daan Hoole;Daan Hoole;0.99573;0;45
+Alemania 1;Jonathan Milan;1.53;2.37;Max Walscheid;Max Walscheid;0.9104;0;45
+Alemania 1;Maikel Zijlaard;1.61;2.2;Ethan Hayter;Maikel Zijlaard;0.99915;1.61;45
+Alemania 1;Marco Brenner;1.61;2.2;Georg Steinhauser;Georg Steinhauser;0.8952;2.2;45
+Alemania 1;Marius Mayrhofer;1.72;2;Anthony Turgis;Marius Mayrhofer;0.5365;1.72;45
+Alemania 1;Orluis Aular;2.1;1.66;Luke Lamperti;Orluis Aular;0.99607;0;45
+Benelux 2;Alberto Bettiol;1.28;3.5;Geraint Thomas ;Alberto Bettiol;0.99943;1.28;32
+Benelux 2;Alec Segaert;1.61;2.2;Tobias Foss;Tobias Foss;0.95494;0;32
+Benelux 2;Ivan Romeo;1.57;2.25;Per Stand Hagenes;Ivan Romeo;0.98563;0;32
+Benelux 2;Jasper Stuyven;1.72;2;Mathieu Van Der Poel;Mathieu Van Der Poel;0.97205;2;32
+Benelux 2;Josef Cerny;1.72;2;Michael Hepburn;Josef Cerny;0.97238;1.72;32
+Benelux 2;Magnus Sheffield;1.66;2.1;Tim Wellens;Magnus Sheffield;0.72903;1.66;32
+Benelux 2;Matteo Trentin;2;1.72;Matej Mohoric;Matej Mohoric;0.9998;0;32
+Benelux 2;Max Walscheid;1.57;2.25;Ryan Mullen;Ryan Mullen;0.9927;2.25;32
+Benelux 2;Max Schachmann;1.61;2.2;Ilan Van Wilder;Ilan Van Wilder;0.98078;0;32
+Benelux 2;Nils Politt;1.5;2.5;Fred Wright;Nils Politt;0.95538;0;32
+Benelux 2;Soren Kragh Andersen;3.25;1.33;Yves Lampaert;Yves Lampaert;0.80772;0;32
+Benelux 2;Stefan Bissegger;1.5;2.5;Mikkel Bjerg;Stefan Bissegger;0.8765;1.5;32
+Vuelta 21;Ben O'Connor;1.53;2.37;Enric Mas;Ben O'Connor;0.95446;1.53;33
+Vuelta 21;Brandon McNulty;2.25;1.57;Stefan Kung;Stefan Kung;0.82979;1.57;33
+Vuelta 21;Bruno Armirail;1.5;2.5;Jay Vine;Jay Vine;0.62576;0;33
+Vuelta 21;Eddie Dumbar;1.44;2.62;Adam Yates;Adam Yates;0.9942;0;33
+Vuelta 21;Kasper Asgreen;1.72;2;Nelson Oliveira;Kasper Asgreen;0.99992;0;33
+Vuelta 21;Mathias Vacek;1.66;2.1;Edoardo Affini;Edoardo Affini;0.99079;0;33
+Vuelta 21;Mattias Skjelmose;1.4;2.75;Florian Lipowitz;Mattias Skjelmose;0.99969;1.4;33
+Vuelta 21;Pavel Sivakov;1.4;2.75;Carlos Rodriguez;Carlos Rodriguez;0.76902;2.75;33
+Vuelta 21;Primoz Roglic;1.44;2.62;Mattia Cattaneo;Primoz Roglic;0.99885;1.44;33
+Vuelta 21;Richard Carapaz;1.53;2.37;David Gaudu;Richard Carapaz;0.76776;1.53;33
+Vuelta 21;Victor Campenaerts;1.16;4.5;Thibault Guernalec;Victor Campenaerts;0.98636;1.16;33
+Europeo;Edoardo Affini;1.33;3.25;Thymen Arensman;Edoardo Affini;0.99829;1.33;55
+Europeo;Kasper Asgreen;1.66;2.1;Daan Hoole;Kasper Asgreen;0.93828;0;55
+Europeo;Mattia Cattaneo;1.33;3.25;Mikkel Bjerg;Mikkel Bjerg;0.66801;0;55
+Europeo;Max Walscheid;1.57;2.25;Ivo Oliveira;Ivo Oliveira;0.98213;0;55
+Europeo;Raul Garcia Pierna;1.72;2;Filip Maciejuk;Raul Garcia Pierna;0.99991;1.72;55
+Europeo;Stefan Bissegger;1.36;3;Victor Campenaerts;Stefan Bissegger;0.98704;0;55
+Europeo;Stefan Kung;1.14;5;Soren Waerenskjold;Stefan Kung;0.9863;1.14;55
+Luxemburg 4;Alex Kirsch;1.72;2;Ivo Oliveira;Ivo Oliveira;0.9659;0;23
+Luxemburg 4;Christophe Laporte;2.62;1.44;Mads Pedersen;Mads Pedersen;0.91702;1.44;23
+Luxemburg 4;Finn Fisher-Black;2;1.72;Felix Grossschartner;Finn Fisher-Black;0.93056;0;23
+Luxemburg 4;Fred Wright;2;1.72;Bart Lemmen;Fred Wright;0.9911;2;23
+Luxemburg 4;Harry Sweeny;1.36;3;Logan Currie;Logan Currie;0.99947;0;23
+Luxemburg 4;Juan Ayuso;1.44;2.62;Anonio Tiberi;Juan Ayuso;0.95523;1.44;23
+Luxemburg 4;Lorenzo Milesi;1.5;2.5;Mirco Maestri;Lorenzo Milesi;0.99995;1.5;23
+Luxemburg 4;Marc Hirschi;2.5;1.5;Mathieu Van der Poel;Mathieu Van der Poel;0.90435;0;23
+Luxemburg 4;Pepijn Reinderink;1.72;2;Victor Vercouille;Pepijn Reinderink;0.80142;0;23
+Luxemburg 4;Wilco Kelderman;1.4;2.75;Will Barta;Will Barta;0.70563;2.75;23
+Mundial;Daan Hoole;1.66;2.1;Bruno Armirail;Bruno Armirail;0.93687;2.1;16
+Mundial;Derek Gee;1.66;2.1;Raul Garcia Pierna;Derek Gee;0.96542;1.66;16
+Mundial;Edoardo Affini;1.72;2;Magnus Sheffield;Magnus Sheffield;0.99852;0;16
+Mundial;Joao Almeida;1.57;2.25;Kasper Asgreen;Joao Almeida;0.97632;0;16
+Mundial;Joshua Tarling;1.28;3.5;Stefan Kung;Joshua Tarling;0.99875;1.28;16
+Mundial;Mathias Vacek;1.72;2;Victor Campenaerts;Mathias Vacek;0.99964;0;16
+Mundial;Nelson Oliveira;1.53;2.37;Maximilian Schachmann;Maximilian Schachmann;0.99125;0;16
+Mundial;Primoz Roglic;1.4;2.75;Brandon McNulty;Primoz Roglic;0.99753;0;16
+Mundial;Remco Evenepoel;1.16;4.5;Filippo Ganna;Remco Evenepoel;0.99908;1.16;16
+Mundial;Soren Waerenskjold;1.83;1.83;Stefan Bissegger;Stefan Bissegger;0.98563;0;16
+Mundial;Thibault Guernalec;1.44;2.62;Miguel Heidemann;Thibault Guernalec;0.80265;0;16
+Mundial;Tobias Foss;1.83;1.83;Mikkel Bjerg;Tobias Foss;0.74532;1.83;16
+Chrono des Nations;Thibault Guernalec;1.72;2;Miguel Heidemann;Thibault Guernalec;0.88047;1.72;21
+Chrono des Nations;Thomas Gachignard;1.83;1.83;Eddy Le Huitouze;Thomas Gachignard;0.74481;0;21
+Chrono des Nations;Johan Price-Pejtersen;1.66;2.1;Mikkel Bjerg;Mikkel Bjerg;0.61324;0;21
+Chrono des Nations;Stefan Kung;1.57;2.25;Jay Vine;Stefan Kung;0.99826;1.57;21
