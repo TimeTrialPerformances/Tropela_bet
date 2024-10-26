@@ -210,22 +210,22 @@ def update_indicator(valor_seleccionado):
         carreras = df_tropela.loc[df_tropela['Anio'] == anio]['Carrera'].unique()
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Beñat')]['Porcentaje'].tolist(), 
-                            name='Beñat', boxpoints='all', marker_color = color_beniat, line_color = color_beniat,
+                            name='Beñat', boxpoints='all', marker_color = color_beniat, line_color = color_beniat, boxmean=True,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Beñat')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Iker')]['Porcentaje'].tolist(), 
-                            name='Iker', boxpoints='all', marker_color = color_iker, line_color = color_iker,
+                            name='Iker', boxpoints='all', marker_color = color_iker, line_color = color_iker, boxmean=True,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Iker')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Manu')]['Porcentaje'].tolist(),
-                            name='Manu', boxpoints='all', marker_color = color_manu, line_color = color_manu,
+                            name='Manu', boxpoints='all', marker_color = color_manu, line_color = color_manu, boxmean=True,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Manu')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Martin')]['Porcentaje'].tolist(),
-                            name='Martin', boxpoints='all', marker_color = color_martin, line_color = color_martin,
+                            name='Martin', boxpoints='all', marker_color = color_martin, line_color = color_martin, boxmean=True,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Martin')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
         
