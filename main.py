@@ -1,4 +1,4 @@
-from dash import Dash, dash_table, dcc, callback, Output, Input
+from dash import Dash, dash_table, dcc, callback, Output, Input, html
 import pandas as pd
 import plotly.express as px
 import dash_mantine_components as dmc
@@ -10,14 +10,20 @@ from itertools import accumulate
 import statistics
 
 
-df_tropela = pd.read_csv('datos_tropela.csv', sep=';')
+df_tropela = pd.read_csv('dashboard_tropela_bet/datos_tropela.csv', sep=';')
 df_tropela = df_tropela.replace('Beniat', 'Beñat')
 df_tropela['Porcentaje'] = round((df_tropela['Puntos'] / df_tropela['Puntos_ganador']) * 100,2)
 
-df_bet = pd.read_csv('bet.csv',sep=';')
+df_bet = pd.read_csv('dashboard_tropela_bet/bet.csv',sep=';')
 df_bet['cuota_tot'] = df_bet.groupby(['Carrera'])['Resultado'].transform(lambda x: (x.sum() - len(x)))
 df_bet['apostado_total'] = df_bet.groupby(['Carrera'])['Apostado'].transform(lambda x: (x * len(x)))
 df_bet['balance'] = df_bet['cuota_tot'] * df_bet['Apostado']
+
+# try:
+#     df_live = pd.read_csv('dashboard_tropela_bet/live.csv',sep=';')
+#     live = True
+# except:
+#     live = False
 
 gv = ['Italiako Giroa','Frantziako Tourra','Espainiako Vuelta']
 una_semana = ['Paris-Niza', 'Tirreno-Adriatikoa','Kataluniako Volta','Euskal Herriko Itzulia','Romandiako Tourra','Dauphine Kriteriuma','Suizako Tourra']
@@ -32,13 +38,20 @@ color_martin = 'rgb(117,13,134)'
 
 anio = 2024
 
+
+# if not live:
+#     diccionario = {'value':'live','label':'Zuzenean','disabled':True}
+# else:
+#     diccionario = {'value':'live','label':'Zuzenean'}
+
+
 app = Dash()
 app.title = 'Tropela eta Apustuak'
 server = app.server
 
 app.layout = dmc.Container([
     dmc.Title('Tropela eta Apustuak', color="black", size="h2",align='center'),
-    dmc.SegmentedControl(data = [{'value':'tropela','label':'Tropela'},{'value':'bet','label':'Apustuak'}],
+    dmc.SegmentedControl(data = [{'value':'tropela','label':'Tropela'},{'value':'bet','label':'Apustuak'}],#diccionario],
                                 radius=20,color= 'teal',id='segmented-value',value='tropela'),
     dmc.Grid(children=[
         dmc.Col([dcc.Graph(id='scatter', style={'width': '100%', 'height': '100%'})], span='content'),
@@ -60,7 +73,7 @@ app.layout = dmc.Container([
 
 
 @callback(#RADIO ---------------------------------------------------------------------------------------
-        Output("segmented-value", "value"), Input("segmented-value", "value"))
+Output("segmented-value", "value"), Input("segmented-value", "value"))
 def select_value(value):
     return value
 
@@ -100,7 +113,7 @@ def update_indicator(valor_seleccionado):
 
         fig.add_trace(go.Scatter(x = carreras_bet[-25:], y = balances_50[-25:],mode='lines+markers',line=dict(color='darkviolet'),name='2.Taldea'))
 
-        fig.add_trace(go.Bar(x = carreras_bet, y = Rentabilidad, name = 'Errentagarritasuna', text = Rentabilidad, 
+        fig.add_trace(go.Bar(x = carreras_bet, y = Rentabilidad, name = 'Errent.', text = Rentabilidad, 
                             marker_color='indianred',textposition='outside'))
         width = '1180px'
 
@@ -218,22 +231,22 @@ def update_indicator(valor_seleccionado,carrera_seleccionada):
         carreras = df_tropela.loc[df_tropela['Anio'] == anio]['Carrera'].unique()
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Beñat')]['Porcentaje'].tolist(), 
-                            name='Beñat', boxpoints='all', marker_color = color_beniat, line_color = color_beniat, boxmean=True,
+                            name='Beñat', boxpoints='all', marker_color = color_beniat, line_color = color_beniat,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Beñat')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Iker')]['Porcentaje'].tolist(), 
-                            name='Iker', boxpoints='all', marker_color = color_iker, line_color = color_iker, boxmean=True,
+                            name='Iker', boxpoints='all', marker_color = color_iker, line_color = color_iker,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Iker')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Manu')]['Porcentaje'].tolist(),
-                            name='Manu', boxpoints='all', marker_color = color_manu, line_color = color_manu, boxmean=True,
+                            name='Manu', boxpoints='all', marker_color = color_manu, line_color = color_manu,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Manu')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
 
         fig.add_trace(go.Box(y = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Martin')]['Porcentaje'].tolist(),
-                            name='Martin', boxpoints='all', marker_color = color_martin, line_color = color_martin, boxmean=True,
+                            name='Martin', boxpoints='all', marker_color = color_martin, line_color = color_martin,
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Martin')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
         
@@ -244,6 +257,7 @@ def update_indicator(valor_seleccionado,carrera_seleccionada):
         width = '800px'
         height = '250px'
         display = 'block'
+
 
     elif valor_seleccionado == 'bet':
         df_giro7 = df_bet.loc[df_bet['Carrera'] == carrera_seleccionada]
@@ -318,7 +332,6 @@ def update_indicator(valor_seleccionado):
         )
 
     return fig, {'width': width, 'height': height, 'display': display}
-
 
 @callback( Output('Seleccion_carrera', 'style'), [Input('segmented-value', 'value')] ) 
 def update_dropdown_visibility(slider_value): 
