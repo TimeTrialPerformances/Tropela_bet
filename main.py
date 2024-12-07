@@ -48,6 +48,13 @@ app.layout = dmc.Container([
     dmc.Grid(children=[
         dmc.Col([dcc.Graph(id='boxplot', style={'width': '100%', 'height': '100%'})], span='content'),
         dmc.Col([dcc.Graph(id='tabla', style={'width': '100%', 'height': '100%'})], span='content'),
+        dmc.Select(
+            label='Lehiaketa aukeratu',
+            id='Seleccion_carrera',
+            value=df_bet['Carrera'].to_list()[0],
+            data=[{'value': equipo, 'label': equipo} for equipo in df_bet['Carrera'].unique()],
+            maxDropdownHeight=200,
+        ),
     ],gutter="xl",),
 ], fluid=True)
 
@@ -78,7 +85,7 @@ def update_indicator(valor_seleccionado):
         fig.add_trace(go.Scatter(x=carreras,y=puntos_manu,mode='lines+markers',line=dict(color=color_manu),name='Manu'))
         fig.add_trace(go.Scatter(x=carreras,y=puntos_martin,mode='lines+markers',line=dict(color=color_martin),name='Martin'))
         width = '900px'
-    else:
+    elif valor_seleccionado == 'bet':
         carreras_bet = np.insert(df_bet['Carrera'].unique(), 0, 'Hasiera', axis=0)
         balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
         balances_25 = [round(x / 15,2) for x in balances]
@@ -137,7 +144,7 @@ def update_indicator(valor_seleccionado):
         barmode='stack'
         )
 
-    else:
+    elif valor_seleccionado == 'bet':
         balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
         apostado_total = df_bet['apostado_total'].unique()
         Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
@@ -200,7 +207,8 @@ def update_indicator(valor_seleccionado):
 @callback( #BOXPLOT ---------------------------------------------------------------------------------------
 Output('boxplot', 'figure'),
 Output('boxplot', 'style'),
-Input("segmented-value", "value")
+Input("segmented-value", "value"),
+Input('Seleccion_carrera', "value")
 )
 def update_indicator(valor_seleccionado):
     if valor_seleccionado == 'tropela':
@@ -237,16 +245,27 @@ def update_indicator(valor_seleccionado):
         height = '250px'
         display = 'block'
 
-    else:
-        fig = go.Figure(go.Box(x = [0,1,2,3,4,5], marker_color = 'lightseagreen', name= '',boxpoints='all'))
-
-        width = '0px'
-        height = '0px'
-        display = 'none'
+    elif valor_seleccionado == 'bet':
+        df_giro7 = df_bet.loc[df_bet['Carrera'] == carrera_seleccionada]
+        colors = [['lime' if val != 0 else 'tomato' for val in df_giro7['Resultado']] for _ in range(9)]
+        fig = go.Figure(data=[go.Table(
+        columnwidth = [70,100,35,35,100,100,40,30,60],
+        header=dict(values=['Lehiaketa', 'A Txirrindularia', 'A Kuota', 'B Kuota', 'B Txirrindularia', 'Igarpena', 'Portzentaia', 'Emaitza', 'Jokatutako dirua'],
+                    fill_color='khaki',
+                    align='left'),
+        cells=dict(values=[df_giro7.Carrera, df_giro7.Corredor_1, df_giro7.Cuota_1, df_giro7.Cuota_2, df_giro7.Corredor_2, df_giro7.Prediccion, df_giro7.Porcentaje, df_giro7.Resultado, df_giro7.Apostado],
+                fill_color=colors,
+                align='left'))
+        ])
 
         fig.update_layout(
-        margin=dict(l=0,r=0,b=0,t=0),
+        margin=dict(l=0,r=15,b=0,t=0),
+        barmode='stack'
         )
+        width = '1175px'
+        height = '250px'
+        display = 'block'
+
 
     return fig, {'width': width, 'height': height, 'display': display}
 
@@ -287,7 +306,7 @@ def update_indicator(valor_seleccionado):
         margin=dict(l=0,r=0,b=0,t=0),
         )
 
-    else:
+    elif valor_seleccionado == 'bet':
         fig = go.Figure(go.Box(x = [0,1,2,3,4,5], marker_color = 'lightseagreen', name= '',boxpoints='all'))
 
         width = '0px'
@@ -301,6 +320,10 @@ def update_indicator(valor_seleccionado):
     return fig, {'width': width, 'height': height, 'display': display}
 
 
+@callback( Output('Seleccion_carrera', 'style'), [Input('segmented-value', 'value')] ) 
+def update_dropdown_visibility(slider_value): 
+    if slider_value == 'bet': return {'display': 'block'} 
+    else: return {'display': 'none'}
 
 
 if __name__ == '__main__':
