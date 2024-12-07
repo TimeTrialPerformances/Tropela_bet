@@ -210,7 +210,7 @@ Output('boxplot', 'style'),
 Input("segmented-value", "value"),
 Input('Seleccion_carrera', "value")
 )
-def update_indicator(valor_seleccionado):
+def update_indicator(valor_seleccionado,carrera_seleccionada):
     if valor_seleccionado == 'tropela':
 
         fig = go.Figure()
