@@ -61,6 +61,7 @@ app.layout = dmc.Container([
     dmc.Grid(children=[
         dmc.Col([dcc.Graph(id='boxplot', style={'width': '100%', 'height': '100%'})], span='content'),
         dmc.Col([dcc.Graph(id='tabla', style={'width': '100%', 'height': '100%'})], span='content'),
+        dmc.Stack([
         dmc.Select(
             label='Lehiaketa aukeratu',
             id='Seleccion_carrera',
@@ -68,6 +69,8 @@ app.layout = dmc.Container([
             data=[{'value': equipo, 'label': equipo} for equipo in df_bet['Carrera'].unique()],
             maxDropdownHeight=200,
         ),
+        dmc.Anchor("Zuzenean", href="https://docs.google.com/spreadsheets/d/1hxqUMYxGoulPN6KSdn6olN7hMCEFeVUzD8FwT-QfOdM/edit?usp=sharing", id = 'Link_excel'),
+    ], align='center')
     ],gutter="xl",),
 ], fluid=True)
 
@@ -335,6 +338,11 @@ def update_indicator(valor_seleccionado):
 
 @callback( Output('Seleccion_carrera', 'style'), [Input('segmented-value', 'value')] ) 
 def update_dropdown_visibility(slider_value): 
+    if slider_value == 'bet': return {'display': 'block'} 
+    else: return {'display': 'none'}
+
+@callback( Output('Link_excel', 'style'), [Input('segmented-value', 'value')] ) 
+def update_link_visibility(slider_value): 
     if slider_value == 'bet': return {'display': 'block'} 
     else: return {'display': 'none'}
 
