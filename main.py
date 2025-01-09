@@ -14,7 +14,7 @@ df_tropela = pd.read_csv('datos_tropela.csv', sep=';')
 df_tropela = df_tropela.replace('Beniat', 'Beñat')
 df_tropela['Porcentaje'] = round((df_tropela['Puntos'] / df_tropela['Puntos_ganador']) * 100,2)
 
-df_bet = pd.read_csv('bet.csv',sep=';')
+df_bet = pd.read_csv('bet.csv',sep=',')
 df_bet['cuota_tot'] = df_bet.groupby(['Carrera'])['Resultado'].transform(lambda x: (x.sum() - len(x)))
 df_bet['apostado_total'] = df_bet.groupby(['Carrera'])['Apostado'].transform(lambda x: (x * len(x)))
 df_bet['balance'] = df_bet['cuota_tot'] * df_bet['Apostado']
