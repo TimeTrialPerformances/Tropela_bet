@@ -26,7 +26,7 @@ df_bet['balance'] = df_bet['cuota_tot'] * df_bet['Apostado']
 #     live = False
 
 gv = ['Italiako Giroa','Frantziako Tourra','Espainiako Vuelta']
-una_semana = ['Paris-Niza', 'Tirreno-Adriatikoa','Kataluniako Volta','Euskal Herriko Itzulia','Romandiako Tourra','Dauphine Kriteriuma','Suizako Tourra']
+una_semana = ['Paris-Niza', 'Tirreno-Adriatikoa','Kataluniako Volta','Euskal Herriko Itzulia','Romandiako Tourra','Dauphine Kriteriuma','Suizako Tourra','UAE Tour']
 tripticos = ['Flandriako Hirukoa','Ardenetako Hirukoa','Olinpiar Jokoak','Munduko Txapelketa','Lombardiako Hirukoa']
 clasicas = ['Strade Bianche','Milan-Sanremo','Paris-Roubaix','Ordiziako Klasikoa','Donostiako Klasikoa', 'Getxoko Zirkuitoa','Lombardia']
 categorias = ['Clasicas','Grandes Vueltas','Tripticos','Una Semana']
@@ -104,11 +104,15 @@ def update_indicator(valor_seleccionado):
     elif valor_seleccionado == 'bet':
         carreras_bet = np.insert(df_bet['Carrera'].unique(), 0, 'Hasiera', axis=0)
         balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
+        balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
+        balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
+        balances[np.where(carreras_bet == "UAE Tour 2")[0][0]] = 5.68  
         balances_25 = [round(x / 15,2) for x in balances]
         balances_50 = [round(x / 7.5,2) for x in balances]
         apostado_total = df_bet['apostado_total'].unique()
         Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
         Rentabilidad.insert(0, 0)
+        Rentabilidad[np.where(carreras_bet == "UAE Tour 2")[0][0]] = 34.5
 
         fig = go.Figure()
 
