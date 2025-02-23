@@ -36,7 +36,7 @@ color_iker = 'rgb(255,255,51)'
 color_manu = 'rgb(63,136,143)'
 color_martin = 'rgb(117,13,134)'
 
-anio = 2024
+anio = 2025
 
 
 # if not live:
