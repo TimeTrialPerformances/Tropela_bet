@@ -106,13 +106,13 @@ def update_indicator(valor_seleccionado):
         balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
         balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
         balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
-        balances[np.where(carreras_bet == "UAE Tour 2")[0][0]] = 5.68  
+        balances[np.where(carreras_bet == "UAE 2")[0][0]] = 5.68  
         balances_25 = [round(x / 15,2) for x in balances]
         balances_50 = [round(x / 7.5,2) for x in balances]
         apostado_total = df_bet['apostado_total'].unique()
         Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
         Rentabilidad.insert(0, 0)
-        Rentabilidad[np.where(carreras_bet == "UAE Tour 2")[0][0]] = 34.5
+        Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]] = 34.5
 
         fig = go.Figure()
 
@@ -169,10 +169,10 @@ def update_indicator(valor_seleccionado):
         balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
         balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
         balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
-        balances[np.where(carreras_bet == "UAE Tour 2")[0][0]] = 5.68  
+        balances[np.where(carreras_bet == "UAE 2")[0][0]] = 5.68  
         apostado_total = df_bet['apostado_total'].unique()
         Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
-        Rentabilidad[np.where(carreras_bet == "UAE Tour 2")[0][0]-1] = 34.5
+        Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]-1] = 34.5
         rent_pos = round(statistics.mean([x for x in Rentabilidad if x > 0]),2)
         rent_neg = round(statistics.mean([x for x in Rentabilidad if x < 0]),2)
         fig = make_subplots(rows=3, cols=2)
