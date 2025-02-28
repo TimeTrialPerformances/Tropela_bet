@@ -119,9 +119,9 @@ def update_indicator(valor_seleccionado):
 
         fig = go.Figure()
 
-        fig.add_trace(go.Scatter(x = carreras_bet[-25:], y = balances_25[-25:],mode='lines+markers',line=dict(color='seagreen'),name='1.Taldea'))
+        fig.add_trace(go.Scatter(x = carreras_bet, y = balances_25,mode='lines+markers',line=dict(color='seagreen'),name='1.Taldea'))
 
-        fig.add_trace(go.Scatter(x = carreras_bet[-25:], y = balances_50[-25:],mode='lines+markers',line=dict(color='darkviolet'),name='2.Taldea'))
+        fig.add_trace(go.Scatter(x = carreras_bet, y = balances_50,mode='lines+markers',line=dict(color='darkviolet'),name='2.Taldea'))
 
         fig.add_trace(go.Bar(x = carreras_bet, y = Rentabilidad, name = 'Errent.', text = Rentabilidad, 
                             marker_color='indianred',textposition='outside'))
