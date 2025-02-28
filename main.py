@@ -17,7 +17,7 @@ df_tropela['Porcentaje'] = round((df_tropela['Puntos'] / df_tropela['Puntos_gana
 df_bet = pd.read_csv('bet.csv',sep=',')
 df_bet['cuota_tot'] = df_bet.groupby(['Carrera'])['Resultado'].transform(lambda x: (x.sum() - len(x)))
 df_bet['apostado_total'] = df_bet.groupby(['Carrera'])['Apostado'].transform(lambda x: (x * len(x)))
-df_bet['balance'] = df_bet['cuota_tot'] * df_bet['Apostado']
+# df_bet['balance'] = df_bet['cuota_tot'] * df_bet['Apostado']
 
 # try:
 #     df_live = pd.read_csv('live.csv',sep=';')
@@ -103,18 +103,20 @@ def update_indicator(valor_seleccionado):
         width = '900px'
     elif valor_seleccionado == 'bet':
         carreras_bet = np.insert(df_bet['Carrera'].unique(), 0, 'Hasiera', axis=0)
-        balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
-        balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
-        balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
-        balances[np.where(carreras_bet == "UAE 2")[0][0]] = 5.68  
-        balances[np.where(carreras_bet == "Algarve 5")[0][0]] = 6.62
+        # balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
+        balances = np.insert(df_bet['total'].unique(), 0, 375, axis=0)
+        # balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
+        # balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
+        # balances[np.where(carreras_bet == "UAE 2")[0][0]] = 5.68  
+        # balances[np.where(carreras_bet == "Algarve 5")[0][0]] = 6.62
         balances_25 = [round(x / 15,2) for x in balances]
         balances_50 = [round(x / 7.5,2) for x in balances]
         apostado_total = df_bet['apostado_total'].unique()
-        Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
+        # Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
+        Rentabilidad = df_bet['Rentabilidad'].unique()
         Rentabilidad.insert(0, 0)
-        Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]] = 34.5
-        Rentabilidad[np.where(carreras_bet == "Algarve 5")[0][0]] = 16.54
+        # Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]] = 34.5
+        # Rentabilidad[np.where(carreras_bet == "Algarve 5")[0][0]] = 16.54
 
         fig = go.Figure()
 
@@ -168,15 +170,18 @@ def update_indicator(valor_seleccionado):
 
     elif valor_seleccionado == 'bet':
         carreras_bet = np.insert(df_bet['Carrera'].unique(), 0, 'Hasiera', axis=0)
-        balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
-        balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
-        balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
-        balances[np.where(carreras_bet == "UAE 2")[0][0]] = 5.68  
-        balances[np.where(carreras_bet == "Algarve 5")[0][0]] = 6.62
+        balances = np.insert(df_bet['total'].unique(), 0, 375, axis=0)
+        # balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
+        # balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
+        # balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
+        # balances[np.where(carreras_bet == "UAE 2")[0][0]] = 5.68  
+        # balances[np.where(carreras_bet == "Algarve 5")[0][0]] = 6.62
         apostado_total = df_bet['apostado_total'].unique()
-        Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
-        Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]-1] = 34.5
-        Rentabilidad[np.where(carreras_bet == "Algarve 5")[0][0]-1] = 16.54
+        # Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
+        # Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]-1] = 34.5
+        # Rentabilidad[np.where(carreras_bet == "Algarve 5")[0][0]-1] = 16.54
+        Rentabilidad = df_bet['Rentabilidad'].unique()
+        Rentabilidad.insert(0, 0)
         rent_pos = round(statistics.mean([x for x in Rentabilidad if x > 0]),2)
         rent_neg = round(statistics.mean([x for x in Rentabilidad if x < 0]),2)
         fig = make_subplots(rows=3, cols=2)
