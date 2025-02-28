@@ -104,7 +104,7 @@ def update_indicator(valor_seleccionado):
     elif valor_seleccionado == 'bet':
         carreras_bet = np.insert(df_bet['Carrera'].unique(), 0, 'Hasiera', axis=0)
         # balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
-        balances = np.insert(df_bet['total'].unique(), 0, 375, axis=0)
+        balances = np.insert(df_bet.groupby('Carrera', as_index=False).first()['total'], 0, 375, axis=0)
         # balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
         # balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
         # balances[np.where(carreras_bet == "UAE 2")[0][0]] = 5.68  
@@ -113,7 +113,7 @@ def update_indicator(valor_seleccionado):
         balances_50 = [round(x / 7.5,2) for x in balances]
         apostado_total = df_bet['apostado_total'].unique()
         # Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
-        Rentabilidad = np.insert(df_bet['Rentabilidad'].unique(),0, 0, axis= 0)
+        Rentabilidad = np.insert(df_bet.groupby('Carrera', as_index=False).first()['Rentabilidad'],0, 0, axis= 0)
         # Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]] = 34.5
         # Rentabilidad[np.where(carreras_bet == "Algarve 5")[0][0]] = 16.54
 
@@ -169,7 +169,7 @@ def update_indicator(valor_seleccionado):
 
     elif valor_seleccionado == 'bet':
         carreras_bet = np.insert(df_bet['Carrera'].unique(), 0, 'Hasiera', axis=0)
-        balances = np.insert(df_bet['total'].unique(), 0, 375, axis=0)
+        balances = np.insert(df_bet.groupby('Carrera', as_index=False).first()['total'], 0, 375, axis=0)
         # balances = list(accumulate(np.insert(df_bet['balance'].unique(), 0, 375, axis=0)))
         # balances[np.where(carreras_bet == "Australia")[0][0]] = 3.75
         # balances[np.where(carreras_bet == "Etoile de Besseges 5")[0][0]] = 4.21
@@ -179,7 +179,7 @@ def update_indicator(valor_seleccionado):
         # Rentabilidad = [round(((balances[i] - balances[i - 1])/ apostado_total[i-1])*100,2) for i in range(1, len(balances))]
         # Rentabilidad[np.where(carreras_bet == "UAE 2")[0][0]-1] = 34.5
         # Rentabilidad[np.where(carreras_bet == "Algarve 5")[0][0]-1] = 16.54
-        Rentabilidad = np.insert(df_bet['Rentabilidad'].unique(),0, 0, axis= 0)
+        Rentabilidad = np.insert(df_bet.groupby('Carrera', as_index=False).first()['Rentabilidad'],0, 0, axis= 0)
         rent_pos = round(statistics.mean([x for x in Rentabilidad if x > 0]),2)
         rent_neg = round(statistics.mean([x for x in Rentabilidad if x < 0]),2)
         fig = make_subplots(rows=3, cols=2)
