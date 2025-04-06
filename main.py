@@ -28,7 +28,7 @@ df_bet['apostado_total'] = df_bet.groupby(['Carrera'])['Apostado'].transform(lam
 gv = ['Italiako Giroa','Frantziako Tourra','Espainiako Vuelta']
 una_semana = ['Paris-Niza', 'Tirreno-Adriatikoa','Kataluniako Volta','Euskal Herriko Itzulia','Romandiako Tourra','Dauphine Kriteriuma','Suizako Tourra','UAE Tour']
 tripticos = ['Flandriako Hirukoa','Ardenetako Hirukoa','Olinpiar Jokoak','Munduko Txapelketa','Lombardiako Hirukoa']
-clasicas = ['Strade Bianche','Milan-Sanremo','Paris-Roubaix','Ordiziako Klasikoa','Donostiako Klasikoa', 'Getxoko Zirkuitoa','Lombardia']
+clasicas = ['Strade Bianche','Milan-Sanremo','Paris-Roubaix','Ordiziako Klasikoa','Donostiako Klasikoa', 'Getxoko Zirkuitoa','Lombardia','Flandriako Tourra']
 categorias = ['Clasicas','Grandes Vueltas','Tripticos','Una Semana']
 
 color_beniat = 'rgb(204,0,0)'
