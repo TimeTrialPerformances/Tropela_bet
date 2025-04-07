@@ -307,7 +307,7 @@ def update_indicator(valor_seleccionado,carrera_seleccionada):
         margin=dict(l=0,r=15,b=0,t=0),
         barmode='stack'
         )
-        width = '1175px'
+        width = '1200px'
         height = '250px'
         display = 'block'
 
