@@ -162,6 +162,7 @@ def update_indicator(valor_seleccionado):
                             marker = dict(color = 'rgba(231, 116, 15, 0.6)', line = dict(color = 'rgba(231, 116, 15, 1.0)', width = 3))))
         width = '500px'
         height = '300px'
+        display = 'block'
         
         fig.update_layout(
         margin=dict(l=0,r=0,b=0,t=0),
@@ -245,7 +246,7 @@ def update_indicator(valor_seleccionado):
         margin=dict(l=0,r=0,b=0,t=0),
         )
 
-    return fig, {'width': width, 'height': height} 
+    return fig, {'width': width, 'height': height, 'display': display} 
 
 @callback( #BOXPLOT ---------------------------------------------------------------------------------------
 Output('boxplot', 'figure'),
