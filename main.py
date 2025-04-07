@@ -125,7 +125,7 @@ def update_indicator(valor_seleccionado):
 
         fig.add_trace(go.Bar(x = carreras_bet, y = Rentabilidad, name = 'Errent.', text = Rentabilidad, 
                             marker_color='indianred',textposition='outside'))
-        width = '1180px'
+        width = '1300px'
 
 
     fig.update_layout(
@@ -228,13 +228,13 @@ def update_indicator(valor_seleccionado):
         title = {'text': "Batez besteko<br /> errentagarritasuna<br /> galtzean", 'font': {'size':12}},
         domain = {'row': 2, 'column': 1}))
 
-        width = '260px'
+        width = '0px' #260
         fig.update_layout(
         margin=dict(l=0,r=0,b=0,t=0),
         grid = {'rows': 3, 'columns': 2, 'pattern': "independent"},
         )
 
-    return fig, {'width': width, 'height': '300px'}
+    return fig, {'width': width, 'height': '0px'} #300
 
 @callback( #BOXPLOT ---------------------------------------------------------------------------------------
 Output('boxplot', 'figure'),
