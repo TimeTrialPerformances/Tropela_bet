@@ -14,9 +14,9 @@ df_tropela = pd.read_csv('datos_tropela.csv', sep=';')
 df_tropela = df_tropela.replace('Beniat', 'Beñat')
 df_tropela['Porcentaje'] = round((df_tropela['Puntos'] / df_tropela['Puntos_ganador']) * 100,2)
 
-df_bet = pd.read_csv('bet.csv',sep=',')
-df_bet['cuota_tot'] = df_bet.groupby(['Carrera'])['Resultado'].transform(lambda x: (x.sum() - len(x)))
-df_bet['apostado_total'] = df_bet.groupby(['Carrera'])['Apostado'].transform(lambda x: (x * len(x)))
+# df_bet = pd.read_csv('bet.csv',sep=',')
+# df_bet['cuota_tot'] = df_bet.groupby(['Carrera'])['Resultado'].transform(lambda x: (x.sum() - len(x)))
+# df_bet['apostado_total'] = df_bet.groupby(['Carrera'])['Apostado'].transform(lambda x: (x * len(x)))
 # df_bet['balance'] = df_bet['cuota_tot'] * df_bet['Apostado']
 
 # try:
@@ -51,7 +51,7 @@ server = app.server
 
 app.layout = dmc.Container([
     dmc.Title('Tropela eta Apustuak', color="black", size="h2",align='center'),
-    dmc.SegmentedControl(data = [{'value':'tropela','label':'Tropela'},{'value':'bet','label':'Apustuak'}],#diccionario],
+    dmc.SegmentedControl(data = [{'value':'tropela','label':'Tropela'},{'value':'bet','label':'Apustuak',"disabled": True}],#diccionario],
                                 radius=20,color= 'teal',id='segmented-value',value='tropela'),
     dmc.Grid(children=[
         dmc.Col([dcc.Graph(id='scatter', style={'width': '100%', 'height': '100%'})], span='content'),
