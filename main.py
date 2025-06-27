@@ -260,10 +260,9 @@ def update_indicator(valor_seleccionado):
 @callback( #BOXPLOT ---------------------------------------------------------------------------------------
 Output('boxplot', 'figure'),
 Output('boxplot', 'style'),
-Input("segmented-value", "value"),
-Input('Seleccion_carrera', "value")
+Input("segmented-value", "value")
 )
-def update_indicator(valor_seleccionado,carrera_seleccionada):
+def update_indicator(valor_seleccionado):
     if valor_seleccionado == 'tropela':
 
         fig = go.Figure()
@@ -290,14 +289,14 @@ def update_indicator(valor_seleccionado,carrera_seleccionada):
                             customdata = np.stack((carreras, df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Quien'] == 'Martin')]['Porcentaje'].tolist()),axis=-1),
                             hovertemplate= "Lasterketa: %{customdata[0]}<br>" + "Portzentaia: %{customdata[1]}<br>"))
         
-        fig.update_layout(
-        margin=dict(l=0,r=0,b=0,t=0),
-        barmode='stack'
-        )
         width = '800px'
         height = '250px'
         display = 'block'
 
+        fig.update_layout(
+        margin=dict(l=0,r=0,b=0,t=0),
+        barmode='stack'
+        )
 
     return fig, {'width': width, 'height': height, 'display': display}
 
