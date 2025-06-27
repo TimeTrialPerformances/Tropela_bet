@@ -58,20 +58,20 @@ app.layout = dmc.Container([
         dmc.Col([dcc.Graph(id='barras', style={'width': '100%', 'height': '100%'})], span='content'),
     ],gutter="xl",),
 
-    dmc.Grid(children=[
-        dmc.Col([dcc.Graph(id='boxplot', style={'width': '100%', 'height': '100%'})], span='content'),
-        dmc.Col([dcc.Graph(id='tabla', style={'width': '100%', 'height': '100%'})], span='content'),
-        dmc.Stack([
-        dmc.Select(
-            label='Lehiaketa aukeratu',
-            id='Seleccion_carrera',
-            value=df_bet['Carrera'].to_list()[0],
-            data=[{'value': equipo, 'label': equipo} for equipo in df_bet['Carrera'].unique()],
-            maxDropdownHeight=200,
-        ),
-        dmc.Anchor("Zuzenean", href="https://docs.google.com/spreadsheets/d/1hxqUMYxGoulPN6KSdn6olN7hMCEFeVUzD8FwT-QfOdM/edit?usp=sharing", id = 'Link_excel'),
-    ], align='center')
-    ],gutter="xl",),
+    # dmc.Grid(children=[
+    #     dmc.Col([dcc.Graph(id='boxplot', style={'width': '100%', 'height': '100%'})], span='content'),
+    #     dmc.Col([dcc.Graph(id='tabla', style={'width': '100%', 'height': '100%'})], span='content'),
+    #     dmc.Stack([
+    #     dmc.Select(
+    #         label='Lehiaketa aukeratu',
+    #         id='Seleccion_carrera',
+    #         value=df_bet['Carrera'].to_list()[0],
+    #         data=[{'value': equipo, 'label': equipo} for equipo in df_bet['Carrera'].unique()],
+    #         maxDropdownHeight=200,
+    #     ),
+    #     dmc.Anchor("Zuzenean", href="https://docs.google.com/spreadsheets/d/1hxqUMYxGoulPN6KSdn6olN7hMCEFeVUzD8FwT-QfOdM/edit?usp=sharing", id = 'Link_excel'),
+    # ], align='center')
+    # ],gutter="xl",),
 ], fluid=True)
 
 
