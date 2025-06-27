@@ -299,37 +299,6 @@ def update_indicator(valor_seleccionado,carrera_seleccionada):
         display = 'block'
 
 
-    elif valor_seleccionado == 'bet':
-        # df_giro7 = df_bet.loc[df_bet['Carrera'] == carrera_seleccionada]
-        # colors = [['lime' if val != 0 else 'tomato' for val in df_giro7['Resultado']] for _ in range(9)]
-        # fig = go.Figure(data=[go.Table(
-        # columnwidth = [70,100,35,35,100,100,40,30,60],
-        # header=dict(values=['Lehiaketa', 'A Txirrindularia', 'A Kuota', 'B Kuota', 'B Txirrindularia', 'Igarpena', 'Portzentaia', 'Emaitza', 'Jokatutako dirua'],
-        #             fill_color='khaki',
-        #             align='left'),
-        # cells=dict(values=[df_giro7.Carrera, df_giro7.Corredor_1, df_giro7.Cuota_1, df_giro7.Cuota_2, df_giro7.Corredor_2, df_giro7.Prediccion, df_giro7.Porcentaje, df_giro7.Resultado, df_giro7.Apostado],
-        #         fill_color=colors,
-        #         align='left'))
-        # ])
-
-        # fig.update_layout(
-        # margin=dict(l=0,r=0,b=0,t=0),
-        # barmode='stack'
-        # )
-        # width = '1200px'
-        # height = '250px'
-        # display = 'block'
-        fig = go.Figure(go.Box(x = [0,1,2,3,4,5], marker_color = 'lightseagreen', name= '',boxpoints='all'))
-
-        width = '0px'
-        height = '0px'
-        display = 'none'
-
-        fig.update_layout(
-        margin=dict(l=0,r=0,b=0,t=0),
-        )
-
-
     return fig, {'width': width, 'height': height, 'display': display}
 
 
