@@ -157,10 +157,46 @@ def update_indicator(valor_seleccionado):
             .sort_values(ascending=False)
             .tolist()
         )
-        pts_gv = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(gv))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
-        pts_semana = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(una_semana))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
-        pts_triptico = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(tripticos))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
-        pts_clasica = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(clasicas))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
+        # pts_gv = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(gv))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
+        # pts_semana = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(una_semana))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
+        # pts_triptico = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(tripticos))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
+        # pts_clasica = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(clasicas))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
+
+        pts_gv = (
+        df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(gv))]
+        .groupby('Quien')['Puntos']
+        .sum()
+        .reset_index()
+        .sort_values(by='Quien', ascending=False)['Puntos']
+        .tolist()
+        )
+
+        pts_semana = (
+            df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(una_semana))]
+            .groupby('Quien')['Puntos']
+            .sum()
+            .reset_index()
+            .sort_values(by='Quien', ascending=False)['Puntos']
+            .tolist()
+        )
+
+        pts_triptico = (
+            df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(tripticos))]
+            .groupby('Quien')['Puntos']
+            .sum()
+            .reset_index()
+            .sort_values(by='Quien', ascending=False)['Puntos']
+            .tolist()
+        )
+
+        pts_clasica = (
+            df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(clasicas))]
+            .groupby('Quien')['Puntos']
+            .sum()
+            .reset_index()
+            .sort_values(by='Quien', ascending=False)['Puntos']
+            .tolist()
+        )
 
         fig = go.Figure()
 
