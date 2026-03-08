@@ -150,7 +150,13 @@ Input("segmented-value", "value")
 )
 def update_indicator(valor_seleccionado):
     if valor_seleccionado == 'tropela':
-        nombres = df_tropela.loc[df_tropela['Anio'] == anio].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Quien'].tolist()
+        # nombres = df_tropela.loc[df_tropela['Anio'] == anio].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Quien'].tolist()
+        nombres = (
+            df_tropela.loc[df_tropela['Anio'] == anio, 'Quien']
+            .drop_duplicates()
+            .sort_values(ascending=False)
+            .tolist()
+        )
         pts_gv = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(gv))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
         pts_semana = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(una_semana))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
         pts_triptico = df_tropela.loc[(df_tropela['Anio'] == anio) & (df_tropela['Carrera'].isin(tripticos))].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Quien',ascending=False)['Puntos'].tolist()
@@ -308,7 +314,14 @@ Input("segmented-value", "value")
 )
 def update_indicator(valor_seleccionado):
 
-    df_tabla = df_tropela.loc[df_tropela['Anio'] == anio].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Puntos',ascending=False)
+    # df_tabla = df_tropela.loc[df_tropela['Anio'] == anio].groupby('Quien').sum('Puntos').reset_index().sort_values(by='Puntos',ascending=False)
+    df_tabla = (
+        df_tropela.loc[df_tropela['Anio'] == anio]
+        .groupby('Quien')['Puntos']
+        .sum()
+        .reset_index()
+        .sort_values(by='Puntos', ascending=False)
+    )
     df_tabla['Ranking'] = range(1, len(df_tabla) + 1)
     df_tabla['Ranking'] = pd.to_numeric(df_tabla['Ranking'])
     puntos_lider = max(df_tabla['Puntos'])
