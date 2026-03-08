@@ -28,7 +28,7 @@ df_tropela['Porcentaje'] = round((df_tropela['Puntos'] / df_tropela['Puntos_gana
 gv = ['Italiako Giroa','Frantziako Tourra','Espainiako Vuelta']
 una_semana = ['Paris-Niza', 'Tirreno-Adriatikoa','Kataluniako Volta','Euskal Herriko Itzulia','Romandiako Tourra','Dauphine Kriteriuma','Suizako Tourra','UAE Tour']
 tripticos = ['Flandriako Hirukoa','Ardenetako Hirukoa','Olinpiar Jokoak','Munduko Txapelketa','Lombardiako Hirukoa']
-clasicas = ['Strade Bianche','Milan-Sanremo','Paris-Roubaix','Ordiziako Klasikoa','Donostiako Klasikoa', 'Getxoko Zirkuitoa','Lombardia','Flandriako Tourra']
+clasicas = ['Strade Bianche','Milan-Sanremo','Paris-Roubaix','Ordiziako Klasikoa','Donostiako Klasikoa', 'Getxoko Zirkuitoa','Lombardia','Flandriako Tourra','Omloop']
 categorias = ['Clasicas','Grandes Vueltas','Tripticos','Una Semana']
 
 color_beniat = 'rgb(204,0,0)'
@@ -36,7 +36,7 @@ color_iker = 'rgb(255,255,51)'
 color_manu = 'rgb(63,136,143)'
 color_martin = 'rgb(117,13,134)'
 
-anio = 2025
+anio = 2026
 
 
 # if not live:
